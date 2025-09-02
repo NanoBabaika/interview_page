@@ -1,4 +1,6 @@
- async function initializeApp() {
+const display = document.getElementById('display_text');
+
+async function initializeApp() {
   try {
     // Загружаем вопросы
     const questionsData = await loadQuestions();
@@ -6,9 +8,9 @@
     // Инициализируем приложение
     initApp(questionsData);
     
-    const question = setupTopicButtons(questionsData);
-    // Другие инициализации
-
+    setupTopicButtons(questionsData);
+    
+    
   } catch (error) {
     console.error('Ошибка инициализации приложения:', error);
   }
@@ -35,7 +37,8 @@ function setupTopicButtons (questionsData) {
       // Получаем значение атрибута data-topic
       const topic = this.getAttribute('data-topic');
       console.log('Выбрана тема:', topic);
-      questionRequest(topic, questionsData);    
+      const requestedQuestion = questionRequest(topic, questionsData);    
+      renderQuestion(requestedQuestion);
     });
   });
 
@@ -52,22 +55,18 @@ function questionRequest(topic, questionsData) {
   case 'HTML':
     const randomIndexHTML = Math.floor(Math.random() * html.length);
     const randomQuestionHTML = html[randomIndexHTML];
-    console.log(randomQuestionHTML);
     return randomQuestionHTML;
   case 'CSS':
     const randomIndexCSS = Math.floor(Math.random() * css.length);
     const randomQuestionCSS = css[randomIndexCSS];
-    console.log(randomQuestionCSS);
     return randomQuestionCSS;
   case 'JavaScript':
     const randomIndexJS= Math.floor(Math.random() * javascript.length);
     const randomQuestionJS = javascript[randomIndexJS];
-    console.log(randomQuestionJS);
     return randomQuestionJS;
   case 'React':
     const randomIndexReact= Math.floor(Math.random() * react.length);
     const randomQuestionReact = react[randomIndexReact];
-    console.log(randomQuestionReact);
     return randomQuestionReact;
   default:
     console.log('Ошибка заголовок не найден...');
@@ -75,7 +74,16 @@ function questionRequest(topic, questionsData) {
   }
 } 
  
-function renderQuestion() {
+function renderQuestion(question) {
+  // Выводим данные в дисплей
+  const questionText = question.text;
+  console.log(questionText);
+  display.textContent = questionText;
+
+  // Нужно продумать как динамически отображать верстку
+  // Если вопрос без вариантов ответа тогда будет одна кнопка получить ответ
+
+  // Если есть варианты ответа то должны отобразиться соответствующие кнопки с нужным текстом.
 
 }
 

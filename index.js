@@ -1,4 +1,6 @@
 const display = document.getElementById('display_text');
+const answerPanel = document.getElementById('variables_btns');
+
 
 async function initializeApp() {
   try {
@@ -68,6 +70,13 @@ function questionRequest(topic, questionsData) {
     const randomIndexReact= Math.floor(Math.random() * react.length);
     const randomQuestionReact = react[randomIndexReact];
     return randomQuestionReact;
+  case 'Случайный вопрос':
+    const themes = Object.values(questionsData);
+    const randomThemeIndex = Math.floor(Math.random() * themes.length);
+    const randomTheme = themes[randomThemeIndex];
+    const randomQuestionIndex = Math.floor(Math.random() * randomTheme.length);
+    const randomQuestion = randomTheme[randomQuestionIndex];
+    return randomQuestion;
   default:
     console.log('Ошибка заголовок не найден...');
     return ;
@@ -75,16 +84,49 @@ function questionRequest(topic, questionsData) {
 } 
  
 function renderQuestion(question) {
+  let questionText = '';
+  answerPanel.innerHTML = '';
+
   // Выводим данные в дисплей
-  const questionText = question.text;
+  console.log(question);
+  questionText = question.text;
   console.log(questionText);
   display.textContent = questionText;
+  
+  // Разметка для открытого вопроса
+  const murkupBtnAnswer = `
+          <button id="getAnswer" class="variables_btn">Получить ответ</button>
+    `;
+
+  // Разметка для закрытого вопроса
+  let = murkupBtnsVariable = `
+        <button id="a" class="variables_btn" >вариант a</button>
+        <button id="b" class="variables_btn" >вариант b</button>
+        <button id="c" class="variables_btn" >вариант c</button>
+        <button id="d" class="variables_btn" >вариант d</button>
+  `;
+
+  if (question.hasOwnProperty('options')) {
+      console.log('Вопрос с вариантами ответа');
+
+    } else {
+    console.log('Открытый вопрос');
+    answerPanel.insertAdjacentHTML('afterbegin', murkupBtnAnswer);
+    answerBtn = document.getElementById('getAnswer');
+    answerBtn.addEventListener('click', getAnswer());
+  } 
 
   // Нужно продумать как динамически отображать верстку
   // Если вопрос без вариантов ответа тогда будет одна кнопка получить ответ
 
   // Если есть варианты ответа то должны отобразиться соответствующие кнопки с нужным текстом.
+   
+  return;
+}
 
+// Функция получения ответа
+function getAnswer() {
+  console.log('works!');
 }
 
 // Запускаем приложение

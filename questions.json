@@ -5,10 +5,10 @@
       "text": "Какой тег используется для создания ссылки?",
       "hasOptions": true,
       "options": [
-        { "id": 1, "text": "<link>", "isCorrect": false },
-        { "id": 2, "text": "<a>", "isCorrect": true },
-        { "id": 3, "text": "<href>", "isCorrect": false },
-        { "id": 4, "text": "<anchor>", "isCorrect": false }
+        { "id": 1, "text": "link", "isCorrect": false },
+        { "id": 2, "text": "a", "isCorrect": true },
+        { "id": 3, "text": "href", "isCorrect": false },
+        { "id": 4, "text": "anchor", "isCorrect": false }
       ]
     },
     {
@@ -16,10 +16,10 @@
       "text": "Какой тег используется для вставки изображения?",
       "hasOptions": true,
       "options": [
-        { "id": 1, "text": "<img>", "isCorrect": true },
-        { "id": 2, "text": "<picture>", "isCorrect": false },
-        { "id": 3, "text": "<media>", "isCorrect": false },
-        { "id": 4, "text": "<graphic>", "isCorrect": false }
+        { "id": 1, "text": "img", "isCorrect": true },
+        { "id": 2, "text": "picture", "isCorrect": false },
+        { "id": 3, "text": "media", "isCorrect": false },
+        { "id": 4, "text": "graphic", "isCorrect": false }
       ]
     },
     {
@@ -27,10 +27,10 @@
       "text": "Какой тег находится в <html> определяет заголовок документа?",
       "hasOptions": true,
       "options": [
-        { "id": 1, "text": "<head>", "isCorrect": true },
-        { "id": 2, "text": "<header>", "isCorrect": false },
-        { "id": 3, "text": "<title>", "isCorrect": false },
-        { "id": 4, "text": "<meta>", "isCorrect": false }
+        { "id": 1, "text": "head", "isCorrect": true },
+        { "id": 2, "text": "header", "isCorrect": false },
+        { "id": 3, "text": "title", "isCorrect": false },
+        { "id": 4, "text": "meta", "isCorrect": false }
       ]
     },
     {
@@ -84,10 +84,10 @@
       "text": "Какой тег используется для создания таблицы?",
       "hasOptions": true,
       "options": [
-        { "id": 1, "text": "<table>", "isCorrect": true },
-        { "id": 2, "text": "<grid>", "isCorrect": false },
-        { "id": 3, "text": "<row>", "isCorrect": false },
-        { "id": 4, "text": "<column>", "isCorrect": false }
+        { "id": 1, "text": "table", "isCorrect": true },
+        { "id": 2, "text": "grid", "isCorrect": false },
+        { "id": 3, "text": "row", "isCorrect": false },
+        { "id": 4, "text": "column", "isCorrect": false }
       ]
     },
     {
@@ -95,10 +95,10 @@
       "text": "Какой тег используется для создания заголовка таблицы?",
       "hasOptions": true,
       "options": [
-        { "id": 1, "text": "<caption>", "isCorrect": false },
-        { "id": 2, "text": "<th>", "isCorrect": false },
-        { "id": 3, "text": "<thead>", "isCorrect": true },
-        { "id": 4, "text": "<title>", "isCorrect": false }
+        { "id": 1, "text": "caption", "isCorrect": false },
+        { "id": 2, "text": "th", "isCorrect": false },
+        { "id": 3, "text": "thead", "isCorrect": true },
+        { "id": 4, "text": "title", "isCorrect": false }
       ]
     },
     {
@@ -106,10 +106,10 @@
       "text": "Какой тег используется для создания строки таблицы?",
       "hasOptions": true,
       "options": [
-        { "id": 1, "text": "<td>", "isCorrect": false },
-        { "id": 2, "text": "<row>", "isCorrect": false },
-        { "id": 3, "text": "<line>", "isCorrect": false },
-        { "id": 4, "text": "<tr>", "isCorrect": true }
+        { "id": 1, "text": "td", "isCorrect": false },
+        { "id": 2, "text": "row", "isCorrect": false },
+        { "id": 3, "text": "line", "isCorrect": false },
+        { "id": 4, "text": "tr", "isCorrect": true }
       ]
     },
     {
@@ -117,10 +117,10 @@
       "text": "Какой тег используется для создания ячейки таблицы?",
       "hasOptions": true,
       "options": [
-        { "id": 1, "text": "<cell>", "isCorrect": false },
-        { "id": 2, "text": "<tr>", "isCorrect": false },
-        { "id": 3, "text": "<th>", "isCorrect": false },
-        { "id": 4, "text": "<td>", "isCorrect": true }
+        { "id": 1, "text": "cell", "isCorrect": false },
+        { "id": 2, "text": "tr", "isCorrect": false },
+        { "id": 3, "text": "th", "isCorrect": false },
+        { "id": 4, "text": "td", "isCorrect": true }
       ]
     },
     {
@@ -145,10 +145,10 @@
       "text": "Какой тег используется для создания выпадающего списка?",
       "hasOptions": true,
       "options": [
-        { "id": 1, "text": "<dropdown>", "isCorrect": false },
-        { "id": 2, "text": "<list>", "isCorrect": false },
-        { "id": 3, "text": "<select>", "isCorrect": true },
-        { "id": 4, "text": "<option>", "isCorrect": false }
+        { "id": 1, "text": "dropdown", "isCorrect": false },
+        { "id": 2, "text": "list", "isCorrect": false },
+        { "id": 3, "text": "select", "isCorrect": true },
+        { "id": 4, "text": "option", "isCorrect": false }
       ]
     },
     {
@@ -156,10 +156,10 @@
       "text": "Какой тег используется для вставки JavaScript кода в HTML документ?",
       "hasOptions": true,
       "options": [
-        { "id": 1, "text": "<javascript>", "isCorrect": false },
-        { "id": 2, "text": "<script>", "isCorrect": true },
-        { "id": 3, "text": "<js>", "isCorrect": false },
-        { "id": 4, "text": "<java>", "isCorrect": false }
+        { "id": 1, "text": "javascript", "isCorrect": false },
+        { "id": 2, "text": "script", "isCorrect": true },
+        { "id": 3, "text": "js", "isCorrect": false },
+        { "id": 4, "text": "java", "isCorrect": false }
       ]
     },
     {
@@ -196,10 +196,10 @@
       "text": "Какой тег HTML используется для вставки видео?",
       "hasOptions": true,
       "options": [
-        { "id": 1, "text": "<media>", "isCorrect": false },
-        { "id": 2, "text": "<video>", "isCorrect": true },
-        { "id": 3, "text": "<movie>", "isCorrect": false },
-        { "id": 4, "text": "<multimedia>", "isCorrect": false }
+        { "id": 1, "text": "media", "isCorrect": false },
+        { "id": 2, "text": "video", "isCorrect": true },
+        { "id": 3, "text": "movie", "isCorrect": false },
+        { "id": 4, "text": "multimedia", "isCorrect": false }
       ]
     },
     {
@@ -207,10 +207,10 @@
       "text": "Какой тег используется для создания главного заголовка на веб-странице?",
       "hasOptions": true,
       "options": [
-        { "id": 1, "text": "<h1>", "isCorrect": true },
-        { "id": 2, "text": "<header>", "isCorrect": false },
-        { "id": 3, "text": "<title>", "isCorrect": false },
-        { "id": 4, "text": "<head>", "isCorrect": false }
+        { "id": 1, "text": "h1", "isCorrect": true },
+        { "id": 2, "text": "header", "isCorrect": false },
+        { "id": 3, "text": "title", "isCorrect": false },
+        { "id": 4, "text": "head", "isCorrect": false }
       ]
     },
     {
@@ -224,10 +224,10 @@
       "text": "Какой тег используется для создания упорядоченного списка?",
       "hasOptions": true,
       "options": [
-        { "id": 1, "text": "<ul>", "isCorrect": false },
-        { "id": 2, "text": "<ol>", "isCorrect": true },
-        { "id": 3, "text": "<li>", "isCorrect": false },
-        { "id": 4, "text": "<list>", "isCorrect": false }
+        { "id": 1, "text": "ul", "isCorrect": false },
+        { "id": 2, "text": "ol", "isCorrect": true },
+        { "id": 3, "text": "li", "isCorrect": false },
+        { "id": 4, "text": "list", "isCorrect": false }
       ]
     },
     {

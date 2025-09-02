@@ -98,29 +98,26 @@ function renderQuestion(question) {
           <button id="getAnswer" class="variables_btn">Получить ответ</button>
     `;
 
-  // Разметка для закрытого вопроса
-  let = murkupBtnsVariable = `
-        <button id="a" class="variables_btn" >вариант a</button>
-        <button id="b" class="variables_btn" >вариант b</button>
-        <button id="c" class="variables_btn" >вариант c</button>
-        <button id="d" class="variables_btn" >вариант d</button>
-  `;
-
   if (question.hasOwnProperty('options')) {
       console.log('Вопрос с вариантами ответа');
+      const options = question.options;
+      console.log(options);
 
+      options.forEach(item => {
+      // Создаем элемент списка
+        let murkupBtnsVariable = `
+          <button id="${item.id}" class="variables_btn" > Вариант ответа: "${item.text}"</button>
+        `;
+        answerPanel.insertAdjacentHTML('afterbegin', murkupBtnsVariable);
+
+      });
     } else {
     console.log('Открытый вопрос');
     answerPanel.insertAdjacentHTML('afterbegin', murkupBtnAnswer);
     answerBtn = document.getElementById('getAnswer');
-    answerBtn.addEventListener('click', getAnswer());
   } 
 
-  // Нужно продумать как динамически отображать верстку
-  // Если вопрос без вариантов ответа тогда будет одна кнопка получить ответ
-
-  // Если есть варианты ответа то должны отобразиться соответствующие кнопки с нужным текстом.
-   
+  // подумать как исправить проблему с вопросами по HTML
   return;
 }
 

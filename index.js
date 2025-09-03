@@ -11,8 +11,6 @@ async function initializeApp() {
     initApp(questionsData);
     
     setupTopicButtons(questionsData);
-    
-    
   } catch (error) {
     console.error('Ошибка инициализации приложения:', error);
   }
@@ -106,16 +104,19 @@ function renderQuestion(question) {
       options.forEach(item => {
       // Создаем элемент списка
         let murkupBtnsVariable = `
-          <button id="${item.id}" class="variables_btn" > Вариант ответа: "${item.text}"</button>
+          <button id="${item.id}" class="variables_btn" > Вариант ответа: "  ${item.text}  "</button>
         `;
         answerPanel.insertAdjacentHTML('afterbegin', murkupBtnsVariable);
 
       });
     } else {
-    console.log('Открытый вопрос');
-    answerPanel.insertAdjacentHTML('afterbegin', murkupBtnAnswer);
-    answerBtn = document.getElementById('getAnswer');
-  } 
+      console.log('Открытый вопрос');
+      answerPanel.insertAdjacentHTML('afterbegin', murkupBtnAnswer);
+      answerBtn = document.getElementById('getAnswer');
+      answerBtn.addEventListener('click', function() {
+      display.textContent = question.answer;
+    });
+   } 
 
   // подумать как исправить проблему с вопросами по HTML
   return;
@@ -123,7 +124,7 @@ function renderQuestion(question) {
 
 // Функция получения ответа
 function getAnswer() {
-  console.log('works!');
+  
 }
 
 // Запускаем приложение

@@ -586,10 +586,10 @@
       "text": "Какой элемент используется для группировки элементов без добавления дополнительных узлов в DOM?",
       "hasOptions": true,
       "options": [
-        { "id": 1, "text": "<Group>", "isCorrect": false },
-        { "id": 2, "text": "<Div>", "isCorrect": false },
-        { "id": 3, "text": "<Fragment> (<>)", "isCorrect": true },
-        { "id": 4, "text": "<List>", "isCorrect": false }
+        { "id": 1, "text": "Group", "isCorrect": false },
+        { "id": 2, "text": "Div", "isCorrect": false },
+        { "id": 3, "text": " Fragment (<>)", "isCorrect": true },
+        { "id": 4, "text": "List", "isCorrect": false }
       ]
     },
     {

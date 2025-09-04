@@ -97,24 +97,26 @@ body {
     .wrapper{
         max-width: 270px;
         height: 605px;
+        padding: 14px;
     }
     .btns {
         width: 250px;
         height: 105px;
     }
     .btn{
-        width: 75px;
-        height: 40px;
-        font-size: 14px;
+        font-size:12px;
+        width: 110px;
+        height: 20px;
     }
     .long_btn {
-        width: 140px;
+        width: 225px;
+        height: 25px;
     }
     .display {
-        width: 311px;
+        width: 245px;
     }
     .display_text {
-        width: 270px;
+        width: 212px;
         font-size: 20px;
     }
     .question_variables {

@@ -114,6 +114,7 @@ body {
     }
     .display {
         width: 245px;
+        margin-top: 10px;
     }
     .display_text {
         width: 212px;

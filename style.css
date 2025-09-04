@@ -87,3 +87,44 @@ body {
     background: #d8ae5b;
     border: 1px solid #fff;
 } 
+
+
+@media screen and (max-width: 600px) { 
+    .page__title{
+        font-size: 20px;
+        text-align: center;
+    }
+    .wrapper{
+        max-width: 270px;
+        height: 605px;
+    }
+    .btns {
+        width: 250px;
+        height: 105px;
+    }
+    .btn{
+        width: 75px;
+        height: 40px;
+        font-size: 14px;
+    }
+    .long_btn {
+        width: 140px;
+    }
+    .display {
+        width: 311px;
+    }
+    .display_text {
+        width: 270px;
+        font-size: 20px;
+    }
+    .question_variables {
+        width: 265px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .variables_btn {
+        width: 270px;
+    }
+
+}

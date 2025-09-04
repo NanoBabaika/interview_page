@@ -97,35 +97,46 @@ function renderQuestion(question) {
     `;
 
   if (question.hasOwnProperty('options')) {
-      console.log('Вопрос с вариантами ответа');
       const options = question.options;
-      console.log(options);
 
       options.forEach(item => {
-      // Создаем элемент списка
-        let murkupBtnsVariable = `
-          <button id="${item.id}" class="variables_btn" > Вариант ответа: "  ${item.text}  "</button>
-        `;
-        answerPanel.insertAdjacentHTML('afterbegin', murkupBtnsVariable);
-
+        let button = document.createElement('button');
+        button.id = item.id;
+        button.className = 'variables_btn';
+        button.textContent = `Вариант ответа: "${item.text}"`;
+        
+        button.addEventListener('click', function() {
+          handleAnswerSelection(item, options);
+        });
+        
+        answerPanel.appendChild(button);
       });
+
+      // Функция обработки выбора ответа
+      function handleAnswerSelection(selectedOption, allOptions) {
+        const correctOption = allOptions.find(option => option.isCorrect);
+        
+        if (selectedOption.isCorrect) {
+          alert('Верно! ✅');
+        } else {
+          alert(`Неверно! ❌ Правильный ответ: "${correctOption.text}"`);
+        }
+      }
+
+
     } else {
-      console.log('Открытый вопрос');
       answerPanel.insertAdjacentHTML('afterbegin', murkupBtnAnswer);
       answerBtn = document.getElementById('getAnswer');
       answerBtn.addEventListener('click', function() {
       display.textContent = question.answer;
+      answerBtn.remove();
     });
    } 
 
-  // подумать как исправить проблему с вопросами по HTML
   return;
 }
 
-// Функция получения ответа
-function getAnswer() {
-  
-}
+
 
 // Запускаем приложение
 document.addEventListener('DOMContentLoaded', initializeApp);

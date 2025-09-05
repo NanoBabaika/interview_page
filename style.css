@@ -96,7 +96,7 @@ body {
     }
     .wrapper{
         max-width: 270px;
-        height: 605px;
+        height: 1100px;
         padding: 14px;
     }
     .btns {
@@ -114,11 +114,13 @@ body {
     }
     .display {
         width: 245px;
+        height: 1100px;
         margin-top: 10px;
     }
     .display_text {
         width: 212px;
         font-size: 16px;
+        max-height: 100%;
     }
     .question_variables {
         width: 265px;
